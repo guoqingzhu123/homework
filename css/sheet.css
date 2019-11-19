@@ -1,0 +1,76 @@
+.*{
+	margin: 0;
+	padding: 0;
+}
+.header{
+	width: 999px;
+	height: 94px;
+	background: white;
+	margin: 0 auto;
+}
+.header .logo{
+	width: 250px;
+	height: 28px;
+	float: left;
+	margin-left: 28px;
+	margin-top: 39px;
+	
+}
+.header .search{
+	width: 228px;
+	height: 28px;
+	background-color: #f1f1f1;
+	float: right;
+	margin-right: 20px;
+	margin-top: 39px;
+	border: 1px solid #fefefe;
+}
+.header .search input[type=text]{
+	width: 199px;
+	height: 28px;
+	padding-left: 16px;
+	border: none;
+	box-sizing: border-box;
+}
+.header .search input[type=submit]{
+	width: 29px;
+	height: 28px;
+	border: none;
+	float: right;
+	background: #f1f1f1 url(../img/search.png) no-repeat center center; 
+}
+.nav{
+	width: 999px;
+	height: 59px;
+	background: #000;
+	margin: 0 auto;
+}
+.nav ul{
+	width: 999px;
+	height: 59px;
+	background: black;
+	padding-left: 43px;
+	box-sizing: border-box;
+}
+ul li{
+	list-sytle:none;
+	float: left;
+	width: 116px;
+	height: 59px;
+	font-size: 15px;
+	text-align: center;
+	line-height: 59px;
+	border-right: 1px solid grey;
+}
+ul li:last-child{
+	border-right: none;
+}
+ul li a{
+	color: white;
+	text-decoration: none;
+}
+.banner{
+	width: 999px;
+	height: 462px;
+	margin: 0 auto;
+}
