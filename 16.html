@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.4.1.min.js"></script>
+
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.box {
+				background: green;
+				text-align: center;
+				width: 600px;
+				font-size: 30px;
+				margin: 0 auto;
+			}
+
+			table {
+				width: 600px;
+				margin: 0 auto;
+			}
+			
+			table tr{
+				width: 600px;
+				height: 30px;
+				text-align: center;
+			}
+
+			.box1 {
+				width: 600px;
+				height: 200px;
+				border: 2px solid red;
+				text-align: center;
+				margin: 0 auto;
+				margin-top: 20px;
+			}
+
+			h3 {
+				text-align: center;
+				font-size: 30px;
+			}
+
+			.box1 input {
+				margin-top: 15px;
+			}
+
+			#btn {
+				width: 50px;
+				height: 30px;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			学生系统
+		</div>
+		<table align="center" border="1" cellspacing="0">
+			<tr align="center" class="aa">
+				<td>学号</td>
+				<td>姓名</td>
+				<td>电话</td>
+				<td></td>
+			</tr>
+			<tr align="center" class="bb">
+				<td>101</td>
+				<td>张三</td>
+				<td>111</td>
+				<td><button>删除</button></td>
+			</tr>
+		</table>
+
+		<div class="box1">
+			<h3>新增学生</h3>
+			<span>学号:</span><input id="xue" type="text" />
+			<br>
+			<span>姓名:</span><input id="xing" type="text" />
+			<br>
+			<span>电话:</span><input id="dian" type="text" />
+			<br>
+			<input id="btn" type="button" value="新增">
+		</div>
+
+
+		<script>
+			$(function() {
+				
+				$("#btn").on("click", function() {
+					var xuehao = $("#xue").val();
+					var name = $("#xing").val();
+					var tel = $("#dian").val();
+					var $tb = $("<tr><td>" + xuehao + "</td><td>" + name + "</td><td>" + tel + "</td><td><button>删除</button></td></tr>");
+					$("table").append($tb);
+				});
+				
+				$("table").on("click","tr",function(){
+					$(this).remove();
+				});	
+
+			});
+		</script>
+
+	</body>
+</html>
